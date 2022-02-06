@@ -1,0 +1,45 @@
+width
+height
+isIndoors
+if indoors then R G B (on dif lines)
+get default start POS for player ( x then y on dif lines )
+get layout just the 0 und 1s sometimes 2s
+get backTile {
+ isAnimated
+ tile type (empty, grass, water)
+ spritePos X then Y seperate lines
+ numFrames IF ANIMATED
+ water
+ wall
+ wild
+ door
+ min level
+ max level
+ whereTo
+ doorAdjust X then Y seperate lines
+}
+get wallTile {
+ isAnimated
+ tile type (empty, grass, water)
+ spritePos X then Y seperate lines
+ numFrames IF ANIMATED
+ water
+ wall
+ wild
+ door
+ min level
+ max level
+ whereTo
+ doorAdjust X then Y seperate lines
+}
+number of Furnitures
+{
+texture
+direction
+position x
+position y
+givesitem
+description
+itemType
+alive
+}
