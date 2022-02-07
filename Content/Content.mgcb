@@ -34,12 +34,19 @@
 #begin Areas/roomtwo.ozz
 /copy:Areas/roomtwo.ozz
 
-#begin debugFont.spritefont
+#begin Font/debugFont.spritefont
 /importer:FontDescriptionImporter
 /processor:FontDescriptionProcessor
 /processorParam:PremultiplyAlpha=True
 /processorParam:TextureFormat=Compressed
-/build:debugFont.spritefont
+/build:Font/debugFont.spritefont
+
+#begin Font/pdaFont.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:Font/pdaFont.spritefont
 
 #begin Furniture/Chairs/Wooden/East/chair.png
 /importer:TextureImporter
@@ -472,13 +479,6 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:PDA/splashScreen.png
-
-#begin pdaFont.spritefont
-/importer:FontDescriptionImporter
-/processor:FontDescriptionProcessor
-/processorParam:PremultiplyAlpha=True
-/processorParam:TextureFormat=Compressed
-/build:pdaFont.spritefont
 
 #begin Player/East/Action.png
 /importer:TextureImporter

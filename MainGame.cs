@@ -4,7 +4,7 @@ using Microsoft.Xna.Framework.Input;
 
 namespace Ozzymon
 {
-    public class Game1 : Game
+    public class MainGame : Game
     {
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
@@ -12,7 +12,7 @@ namespace Ozzymon
         // MAIN GAME ELEMENT that manages the player and areas
         Map world;
 
-        public Game1()
+        public MainGame()
         {
             _graphics = new GraphicsDeviceManager(this);
             _graphics.PreferredBackBufferWidth = 675;

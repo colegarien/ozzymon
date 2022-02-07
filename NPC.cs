@@ -76,23 +76,23 @@ namespace Ozzymon
             // texture IS name of npc skin
 
             // sets all the animations and sets the appropriate shift so it looks right
-            walk.Add(new AnimatedSprite(content.Load<Texture2D>("NPC\\" + texture + "\\North\\Walk"), baseDraw, 20));
-            walk.Add(new AnimatedSprite(content.Load<Texture2D>("NPC\\" + texture + "\\East\\Walk"), baseDraw, 20));
+            walk.Add(new AnimatedSprite(content.Load<Texture2D>("NPC/" + texture + "/North/Walk"), baseDraw, 20));
+            walk.Add(new AnimatedSprite(content.Load<Texture2D>("NPC/" + texture + "/East/Walk"), baseDraw, 20));
             walk[1].shiftOffset(new Vector2(8, 0));
-            walk.Add(new AnimatedSprite(content.Load<Texture2D>("NPC\\" + texture + "\\South\\Walk"), baseDraw, 20));
-            walk.Add(new AnimatedSprite(content.Load<Texture2D>("NPC\\" + texture + "\\West\\Walk"), baseDraw, 20));
+            walk.Add(new AnimatedSprite(content.Load<Texture2D>("NPC/" + texture + "/South/Walk"), baseDraw, 20));
+            walk.Add(new AnimatedSprite(content.Load<Texture2D>("NPC/" + texture + "/West/Walk"), baseDraw, 20));
             walk[3].shiftOffset(new Vector2(-8, 0));
 
-            idle.Add(new AnimatedSprite(content.Load<Texture2D>("NPC\\" + texture + "\\North\\Idle"), baseDraw, 25, 2));
-            idle.Add(new AnimatedSprite(content.Load<Texture2D>("NPC\\" + texture + "\\East\\Idle"), baseDraw, 25, 2));
-            idle.Add(new AnimatedSprite(content.Load<Texture2D>("NPC\\" + texture + "\\South\\Idle"), baseDraw, 25, 2));
-            idle.Add(new AnimatedSprite(content.Load<Texture2D>("NPC\\" + texture + "\\West\\Idle"), baseDraw, 25, 2));
+            idle.Add(new AnimatedSprite(content.Load<Texture2D>("NPC/" + texture + "/North/Idle"), baseDraw, 25, 2));
+            idle.Add(new AnimatedSprite(content.Load<Texture2D>("NPC/" + texture + "/East/Idle"), baseDraw, 25, 2));
+            idle.Add(new AnimatedSprite(content.Load<Texture2D>("NPC/" + texture + "/South/Idle"), baseDraw, 25, 2));
+            idle.Add(new AnimatedSprite(content.Load<Texture2D>("NPC/" + texture + "/West/Idle"), baseDraw, 25, 2));
 
-            action.Add(new AnimatedSprite(content.Load<Texture2D>("NPC\\" + texture + "\\North\\Action"), baseDraw, 11));
-            action.Add(new AnimatedSprite(content.Load<Texture2D>("NPC\\" + texture + "\\East\\Action"), baseDraw, 11));
+            action.Add(new AnimatedSprite(content.Load<Texture2D>("NPC/" + texture + "/North/Action"), baseDraw, 11));
+            action.Add(new AnimatedSprite(content.Load<Texture2D>("NPC/" + texture + "/East/Action"), baseDraw, 11));
             action[1].shiftOffset(new Vector2(-3, 0));
-            action.Add(new AnimatedSprite(content.Load<Texture2D>("NPC\\" + texture + "\\South\\Action"), baseDraw, 11));
-            action.Add(new AnimatedSprite(content.Load<Texture2D>("NPC\\" + texture + "\\West\\Action"), baseDraw, 11));
+            action.Add(new AnimatedSprite(content.Load<Texture2D>("NPC/" + texture + "/South/Action"), baseDraw, 11));
+            action.Add(new AnimatedSprite(content.Load<Texture2D>("NPC/" + texture + "/West/Action"), baseDraw, 11));
             action[3].shiftOffset(new Vector2(3, 0));
 
 

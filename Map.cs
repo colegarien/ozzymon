@@ -45,7 +45,7 @@ namespace Ozzymon
             content = cM;
 
             // load temp font
-            debug = content.Load<SpriteFont>("debugFont");
+            debug = content.Load<SpriteFont>("Font/debugFont");
 
             //FORTESTIN
             List<string> temp = new List<string>();

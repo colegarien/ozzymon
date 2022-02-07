@@ -47,23 +47,23 @@ namespace Ozzymon
             Vector2 baseDraw = new Vector2(4 * 75 + (75f / 2), 6 * 52 + (52));
 
             // sets all the animations and sets the appropriate shift so it looks right
-            walk.Add(new AnimatedSprite(content.Load<Texture2D>("Player\\North\\Walk"), baseDraw, 20));
-            walk.Add(new AnimatedSprite(content.Load<Texture2D>("Player\\East\\Walk"), baseDraw, 20));
+            walk.Add(new AnimatedSprite(content.Load<Texture2D>("Player/North/Walk"), baseDraw, 20));
+            walk.Add(new AnimatedSprite(content.Load<Texture2D>("Player/East/Walk"), baseDraw, 20));
             walk[1].shiftOffset(new Vector2(8, 0));
-            walk.Add(new AnimatedSprite(content.Load<Texture2D>("Player\\South\\Walk"), baseDraw, 20));
-            walk.Add(new AnimatedSprite(content.Load<Texture2D>("Player\\West\\Walk"), baseDraw, 20));
+            walk.Add(new AnimatedSprite(content.Load<Texture2D>("Player/South/Walk"), baseDraw, 20));
+            walk.Add(new AnimatedSprite(content.Load<Texture2D>("Player/West/Walk"), baseDraw, 20));
             walk[3].shiftOffset(new Vector2(-8, 0));
 
-            idle.Add(new AnimatedSprite(content.Load<Texture2D>("Player\\North\\Idle"), baseDraw, 25, 2));
-            idle.Add(new AnimatedSprite(content.Load<Texture2D>("Player\\East\\Idle"), baseDraw, 25, 2));
-            idle.Add(new AnimatedSprite(content.Load<Texture2D>("Player\\South\\Idle"), baseDraw, 25, 2));
-            idle.Add(new AnimatedSprite(content.Load<Texture2D>("Player\\West\\Idle"), baseDraw, 25, 2));
+            idle.Add(new AnimatedSprite(content.Load<Texture2D>("Player/North/Idle"), baseDraw, 25, 2));
+            idle.Add(new AnimatedSprite(content.Load<Texture2D>("Player/East/Idle"), baseDraw, 25, 2));
+            idle.Add(new AnimatedSprite(content.Load<Texture2D>("Player/South/Idle"), baseDraw, 25, 2));
+            idle.Add(new AnimatedSprite(content.Load<Texture2D>("Player/West/Idle"), baseDraw, 25, 2));
 
-            action.Add(new AnimatedSprite(content.Load<Texture2D>("Player\\North\\Action"), baseDraw, 11));
-            action.Add(new AnimatedSprite(content.Load<Texture2D>("Player\\East\\Action"), baseDraw, 11));
+            action.Add(new AnimatedSprite(content.Load<Texture2D>("Player/North/Action"), baseDraw, 11));
+            action.Add(new AnimatedSprite(content.Load<Texture2D>("Player/East/Action"), baseDraw, 11));
             action[1].shiftOffset(new Vector2(-3, 0));
-            action.Add(new AnimatedSprite(content.Load<Texture2D>("Player\\South\\Action"), baseDraw, 11));
-            action.Add(new AnimatedSprite(content.Load<Texture2D>("Player\\West\\Action"), baseDraw, 11));
+            action.Add(new AnimatedSprite(content.Load<Texture2D>("Player/South/Action"), baseDraw, 11));
+            action.Add(new AnimatedSprite(content.Load<Texture2D>("Player/West/Action"), baseDraw, 11));
             action[3].shiftOffset(new Vector2(3, 0));
 
             // SHIFT THE ANIMATIONS SO THEY R RIGHT

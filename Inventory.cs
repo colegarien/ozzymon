@@ -40,16 +40,16 @@ namespace Ozzymon
 
         public Inventory(ContentManager cm)
         {
-            pixel = cm.Load<Texture2D>("PDA\\pixel");
+            pixel = cm.Load<Texture2D>("PDA/pixel");
 
-            staticScreen = cm.Load<Texture2D>("PDA\\pdaStatic");
-            topBorder = cm.Load<Texture2D>("PDA\\pdaTopBorder");
-            bottomBorder = cm.Load<Texture2D>("PDA\\pdaBottomBorder");
-            font = cm.Load<SpriteFont>("pdaFont");
+            staticScreen = cm.Load<Texture2D>("PDA/pdaStatic");
+            topBorder = cm.Load<Texture2D>("PDA/pdaTopBorder");
+            bottomBorder = cm.Load<Texture2D>("PDA/pdaBottomBorder");
+            font = cm.Load<SpriteFont>("Font/pdaFont");
 
-            splashScreen = new Sprite(cm.Load<Texture2D>("PDA\\splashScreen"), screenPos);
-            open = new AnimatedSprite(cm.Load<Texture2D>("PDA\\pdaOpen"), Vector2.Zero, 5, 4);
-            close = new AnimatedSprite(cm.Load<Texture2D>("PDA\\pdaClose"), Vector2.Zero, 5, 4);
+            splashScreen = new Sprite(cm.Load<Texture2D>("PDA/splashScreen"), screenPos);
+            open = new AnimatedSprite(cm.Load<Texture2D>("PDA/pdaOpen"), Vector2.Zero, 5, 4);
+            close = new AnimatedSprite(cm.Load<Texture2D>("PDA/pdaClose"), Vector2.Zero, 5, 4);
 
             close.offset = Vector2.Zero;
             open.offset = Vector2.Zero;

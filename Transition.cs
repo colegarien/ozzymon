@@ -22,24 +22,24 @@ namespace Ozzymon
         public Transition(ContentManager cm)
         {
             // for inbetween
-            blankScreen = cm.Load<Texture2D>("Transitions\\blankscreen");
+            blankScreen = cm.Load<Texture2D>("Transitions/blankscreen");
 
             // All should have ten frames each
             // AKA 2 rows of 5
-            FadeIn.Add(new AnimatedSprite(cm.Load<Texture2D>("Transitions\\FadeIn\\FadeIn1"), Vector2.Zero, 5, 2));
-            FadeOut.Add(new AnimatedSprite(cm.Load<Texture2D>("Transitions\\FadeOut\\FadeOut1"), Vector2.Zero, 5, 2));
+            FadeIn.Add(new AnimatedSprite(cm.Load<Texture2D>("Transitions/FadeIn/FadeIn1"), Vector2.Zero, 5, 2));
+            FadeOut.Add(new AnimatedSprite(cm.Load<Texture2D>("Transitions/FadeOut/FadeOut1"), Vector2.Zero, 5, 2));
 
-            FadeIn.Add(new AnimatedSprite(cm.Load<Texture2D>("Transitions\\FadeIn\\FadeIn2"), Vector2.Zero, 5, 2));
-            FadeOut.Add(new AnimatedSprite(cm.Load<Texture2D>("Transitions\\FadeOut\\FadeOut2"), Vector2.Zero, 5, 2));
+            FadeIn.Add(new AnimatedSprite(cm.Load<Texture2D>("Transitions/FadeIn/FadeIn2"), Vector2.Zero, 5, 2));
+            FadeOut.Add(new AnimatedSprite(cm.Load<Texture2D>("Transitions/FadeOut/FadeOut2"), Vector2.Zero, 5, 2));
 
-            FadeIn.Add(new AnimatedSprite(cm.Load<Texture2D>("Transitions\\FadeIn\\FadeIn3"), Vector2.Zero, 5, 2));
-            FadeOut.Add(new AnimatedSprite(cm.Load<Texture2D>("Transitions\\FadeOut\\FadeOut3"), Vector2.Zero, 5, 2));
+            FadeIn.Add(new AnimatedSprite(cm.Load<Texture2D>("Transitions/FadeIn/FadeIn3"), Vector2.Zero, 5, 2));
+            FadeOut.Add(new AnimatedSprite(cm.Load<Texture2D>("Transitions/FadeOut/FadeOut3"), Vector2.Zero, 5, 2));
 
-            FadeIn.Add(new AnimatedSprite(cm.Load<Texture2D>("Transitions\\FadeIn\\FadeIn4"), Vector2.Zero, 5, 2));
-            FadeOut.Add(new AnimatedSprite(cm.Load<Texture2D>("Transitions\\FadeOut\\FadeOut4"), Vector2.Zero, 5, 2));
+            FadeIn.Add(new AnimatedSprite(cm.Load<Texture2D>("Transitions/FadeIn/FadeIn4"), Vector2.Zero, 5, 2));
+            FadeOut.Add(new AnimatedSprite(cm.Load<Texture2D>("Transitions/FadeOut/FadeOut4"), Vector2.Zero, 5, 2));
 
-            FadeIn.Add(new AnimatedSprite(cm.Load<Texture2D>("Transitions\\FadeIn\\FadeIn5"), Vector2.Zero, 5, 2));
-            FadeOut.Add(new AnimatedSprite(cm.Load<Texture2D>("Transitions\\FadeOut\\FadeOut5"), Vector2.Zero, 5, 2));
+            FadeIn.Add(new AnimatedSprite(cm.Load<Texture2D>("Transitions/FadeIn/FadeIn5"), Vector2.Zero, 5, 2));
+            FadeOut.Add(new AnimatedSprite(cm.Load<Texture2D>("Transitions/FadeOut/FadeOut5"), Vector2.Zero, 5, 2));
 
             // so it will be in the upper left corner
             for (int i = 0; i < FadeIn.Count; i++)

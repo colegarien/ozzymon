@@ -35,80 +35,6 @@ namespace Ozzymon
 
             // load up the areas info from file
             loadArea(n);
-
-            #region old load
-            /*
-            // LOAD THE LAYOUT AND TILE THROUGH TEXT FILE
-            layout = new int[width, height];
-            backTiles = new Tile[width, height];
-            wallTiles = new Tile[width, height];
-
-            for (int x = 0; x < width; x++)
-            {
-                for (int y = 0; y < height; y++)
-                {
-                     wallTiles[x, y] = new Tile(new Sprite(content.Load<Texture2D>("Tiles\\empty"), Vector2.Zero), false, false, false, false, 0, 0, "", Vector2.Zero);
-                     backTiles[x, y] = new Tile(new Sprite(content.Load<Texture2D>("Tiles\\empty"), Vector2.Zero), false, false, false, false, 0, 0, "", Vector2.Zero);
-                }
-            }
-
-            Vector2 baseDraw ;
-            for (int i = 0; i < width; i++)
-            {
-                for (int k = 0; k < height; k++)
-                {
-                    // Postion is from bottom vert and middle horiz
-                    // baseDraw =  new Vector2(i * 75 + (75/2), k * 52 + (52));
-                    baseDraw = new Vector2((( i) * 75 + (75 / 2)) + (75), (( k) * 52 + (52)) + (52));
-                    if ((i == 0 || i == width - 1 || k == 0 || k == height - 1))
-                    {
-                        wallTiles[i, k] = new Tile(new Sprite(content.Load<Texture2D>("Tiles\\Grass\\horizFence"), baseDraw), false, true, false, false, 0, 0, "", Vector2.Zero);
-
-                        // DECIDE HOW TO LOAD THE s--- PROPA
-                        layout[i, k] = 1;
-                        if (i == 0 && k == 0)
-                            wallTiles[i, k] = new Tile(new Sprite(content.Load<Texture2D>("Tiles\\Grass\\rightdownFence"), baseDraw), false, true, false, false, 0, 0, "", Vector2.Zero);
-                        else if (i == width - 1 && k == 0)
-                            wallTiles[i, k] = new Tile(new Sprite(content.Load<Texture2D>("Tiles\\Grass\\leftdownFence"), baseDraw), false, true, false, false, 0, 0, "", Vector2.Zero);
-                        else if(i == 0 && k == height - 1)
-                        wallTiles[i, k] = new Tile(new Sprite(content.Load<Texture2D>("Tiles\\Grass\\rightupFence"), baseDraw), false, true, false, false, 0, 0, "", Vector2.Zero);
-                        else if(i == width - 1 && k == height - 1)
-                            wallTiles[i, k] = new Tile(new Sprite(content.Load<Texture2D>("Tiles\\Grass\\leftupFence"), baseDraw), false, true, false, false, 0, 0, "", Vector2.Zero);
-                        else if (i == 0 || i == width - 1)
-                            wallTiles[i, k] = new Tile(new Sprite(content.Load<Texture2D>("Tiles\\Grass\\vertFence"), baseDraw), false, true, false, false, 0, 0, "", Vector2.Zero);
-                        else if (k == 0)
-                            wallTiles[i, k] = new Tile(new Sprite(content.Load<Texture2D>("Tiles\\Grass\\horizFence"), baseDraw), false, true, false, false, 0, 0, "", Vector2.Zero);
-            
-                    }
-                    else
-                        layout[i, k] = 0;
-             */
-
-            //        backTiles[i, k] = new Tile(new Sprite(content.Load<Texture2D>("Tiles\\Grass\\grassTile"/*"Tiles\\Misc\\untitled"*/), baseDraw), false, false, false, false, 0, 0, "", Vector2.Zero);
-            /*     
-              }
-          }
-
-          layout[1, 1] = 0;
-          baseDraw = new Vector2(((1) * 75 + (75 / 2)) + (75), ((1) * 52 + (52)) + (52));
-          backTiles[1, 1] = new Tile(new Sprite(content.Load<Texture2D>("Tiles\\Misc\\untitled"), baseDraw), false, false, false, true, 0, 0, n + h, new Vector2(0, 1));
-
-          for(int i = width - 5; i <width-1; i++)
-              for (int k = height - 5; k < height - 1; k++)
-              {
-                  layout[i, k] = 1;
-                  wallTiles[i, k] = new Tile(new Sprite(content.Load<Texture2D>("Tiles\\Grass\\wildGrassTile"), baseDraw), false, false,true, false, 1, 5, "", Vector2.Zero);
-              }
-          for(int i = width - 6; i <width-2; i++)
-              for (int k = 2; k < 6; k++)
-              {
-                  layout[i, k] = 1;
-                  wallTiles[i, k] = new Tile(new AnimatedSprite(content.Load<Texture2D>("Tiles\\Water\\waterTile"), baseDraw,3), true, false,false, false, 1, 5, "", Vector2.Zero);
-                  wallTiles[i, k].getAniSprite().setFPS(20);
-
-              }
-          */
-            #endregion
         }
 
         public bool isOutdoor() { return !isIndoors; }
@@ -120,7 +46,7 @@ namespace Ozzymon
         public void loadArea(string name)
         {
             // open up the area file
-            StreamReader file = new StreamReader(@"Content\\Areas\\" + name + ".ozz");
+            StreamReader file = new StreamReader(@"Content/Areas/" + name + ".ozz");
 
             // Width
             width = int.Parse(file.ReadLine());
@@ -222,19 +148,19 @@ namespace Ozzymon
         private string getTexture(string n, bool water, bool wall, bool wild, bool door, int x, int y)
         {
             // set the default folder for tiles
-            string type = "Tiles\\";
+            string type = "Tiles/";
 
             // if tile is empty
             if (n == "empty")
                 type += "empty";
             else if (water) // if the tile isWater
-                type += "Water\\waterTile";
+                type += "Water/waterTile";
             else if (wild) // if the tile is Wilderness
-                type += "Grass\\wildGrassTile";
+                type += "Grass/wildGrassTile";
             else if (n == "grass") // if it is grass
             {
                 // change to grass folder
-                type += "Grass\\";
+                type += "Grass/";
                 if (door || layout[x, y] == 0) // if is a door or empty space
                     type += "grassTile";
                 else if (wall) // if its a wall then make it to fence
@@ -258,39 +184,39 @@ namespace Ozzymon
             else if (n == "room") // if it is the room tex set
             {
                 if (!wall) // if it is a piece of floor
-                    type += "Building\\tileFloor";
+                    type += "Building/tileFloor";
                 else // otherwise it's a wall
-                    type += "Building\\plasterWall";
+                    type += "Building/plasterWall";
             }
             else if (n == "buildingred") // outdoor red building set
             {
                 if (door) // if is the door
-                    type += "Building\\buildingRedDoor";
+                    type += "Building/buildingRedDoor";
                 else // if is wall
-                    type += "Building\\buildingRedWall";
+                    type += "Building/buildingRedWall";
 
 
             }
             else if (n == "buildingblue") // outdoor blue set
             {
                 if (door) // is door
-                    type += "Building\\buildingBlueDoor";
+                    type += "Building/buildingBlueDoor";
                 else // is wall
-                    type += "Building\\buildingBlueWall";
+                    type += "Building/buildingBlueWall";
 
 
             }
             else if (n == "buildinggreen") // outdoor green set
             {
                 if (door) // is door
-                    type += "Building\\buildingGreenDoor";
+                    type += "Building/buildingGreenDoor";
                 else // is wall
-                    type += "Building\\buildingGreenWall";
+                    type += "Building/buildingGreenWall";
             }
             else if (n == "water") // if is water set
-                type += "Water\\waterTile";
+                type += "Water/waterTile";
             else if (n == "misc") // if is misc set
-                type += "Misc\\untitled";
+                type += "Misc/untitled";
             else // then make it empty if nothing else
                 type += "empty";
 
